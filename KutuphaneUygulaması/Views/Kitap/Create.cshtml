@@ -1,0 +1,23 @@
+﻿@using KutuphaneUygulaması.Models
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="KitapAd">Kitap Adı:</label>
+        <input type="text" class="form-control" id="KitapAd" name="KitapAd" required>
+    </div>
+    <div class="form-group">
+        <label for="Yazar">Yazar:</label>
+        <input type="text" class="form-control" id="Yazar" name="Yazar" required>
+    </div>
+    <div class="form-group">
+        <label for="ResimUrl">Resim URL:</label>
+        <input type="text" class="form-control" id="ResimUrl" name="ResimUrl" required>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Kitap Ekle</button>
+</form>

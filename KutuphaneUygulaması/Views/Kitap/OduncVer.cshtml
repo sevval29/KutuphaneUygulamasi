@@ -1,0 +1,29 @@
+﻿@using KutuphaneUygulaması.Models
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@if (ViewBag.AlertMessage != null)
+{
+    <script>
+        alert('@ViewBag.AlertMessage');
+    </script>
+}
+
+
+<form asp-action="OduncVer" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="KitapAd">Ödünç Alan Kişinin Adı:</label>
+        <input type="text" class="form-control" id="OduncAlanAdi" name="OduncAlanAdi" required>
+    </div>
+    <div class="form-group">
+        <label for="Yazar">Geri Getirme Tarihi:</label>
+        <input type="date" class="form-control" id="GeriGetirmeTarihi" name="GeriGetirmeTarihi" required>
+    </div>
+  
+
+    <button type="submit" class="btn btn-primary">Ödünç Ver</button>
+</form>
